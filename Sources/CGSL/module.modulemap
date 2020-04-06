@@ -1,0 +1,5 @@
+module CGSL {
+    header "shim.h"
+    link "gsl"
+    export *
+}
