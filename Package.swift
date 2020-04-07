@@ -16,39 +16,47 @@ let package = Package(
             targets: [
                 "Statistics",
             ]
-        )
+        ),
     ],
     dependencies: [
-
     ],
     targets: [
         .target(
-            name: "Test",
-            dependencies: [
-                "SGSL",
-            ]),
-        .target(
             name: "MathematicalFunctions",
-            dependencies: ["CGSL"]),
+            dependencies: ["CGSL"]
+        ),
         .target(
             name: "Statistics",
-            dependencies: ["CGSL"]),
+            dependencies: ["CGSL"]
+        ),
         .target(
             name: "RandomNumberGeneration",
-            dependencies: ["CGSL"]),
+            dependencies: ["CGSL"]
+        ),
         .target(
             name: "SGSL",
             dependencies: [
                 "MathematicalFunctions",
                 "Statistics",
                 "RandomNumberGeneration",
-            ]),
+            ]
+        ),
         .systemLibrary(
             name: "CGSL",
             pkgConfig: "gsl",
             providers: [
                 .brew(["gsl"]),
                 .apt(["libgsl-dev"]),
-            ]),
+            ]
+        ),
+        .testTarget(name: "MathematicalFunctionsTests", dependencies: [
+            "MathematicalFunctions",
+        ]),
+        .testTarget(name: "StatisticsTests", dependencies: [
+            "Statistics",
+        ]),
+        .testTarget(name: "RandomNumberGenerationTests", dependencies: [
+            "RandomNumberGeneration",
+        ]),
     ]
 )
