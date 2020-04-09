@@ -36,3 +36,7 @@ print(x.mean())
 ## Contributions
 
 If you found missing features or bugs, please feel free to open an issue or even better, a pull request. :-)
+
+### Code style
+
+We use [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) with default settings.
