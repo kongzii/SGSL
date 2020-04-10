@@ -7,19 +7,24 @@ extension Array where Element == Double {
         gsl_stats_mean(self, stride, count)
     }
 
-    public func median() -> Double {
-        let sorted = self.sorted()
-        return gsl_stats_median_from_sorted_data(sorted, 1, count)
-    }
-
-    public func sampleVariance() -> Double {
-        gsl_stats_variance(self, 1, count)
+    public func median(
+        isSorted: Bool = false,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_median_from_sorted_data(isSorted ? self : sorted(), stride, count)
     }
 
     public func sampleVariance(
-        withMean mean: Double
+        withStride stride: Int = 1
     ) -> Double {
-        gsl_stats_variance_m(self, 1, count, mean)
+        gsl_stats_variance(self, stride, count)
+    }
+
+    public func sampleVariance(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_variance_m(self, stride, count, mean)
     }
 
     public func sampleStandardDeviation(
