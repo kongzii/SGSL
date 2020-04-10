@@ -7,15 +7,11 @@ let package = Package(
     products: [
         .library(
             name: "SGSL",
-            targets: [
-                "SGSL",
-            ]
+            targets: ["SGSL"]
         ),
         .library(
             name: "Statistics",
-            targets: [
-                "Statistics",
-            ]
+            targets: ["Statistics"]
         ),
     ],
     dependencies: [
@@ -49,14 +45,17 @@ let package = Package(
                 .apt(["libgsl-dev"]),
             ]
         ),
-        .testTarget(name: "MathematicalFunctionsTests", dependencies: [
-            "MathematicalFunctions",
-        ]),
-        .testTarget(name: "StatisticsTests", dependencies: [
-            "Statistics",
-        ]),
-        .testTarget(name: "RandomNumberGenerationTests", dependencies: [
-            "RandomNumberGeneration",
-        ]),
+        .testTarget(
+            name: "MathematicalFunctionsTests",
+            dependencies: ["MathematicalFunctions"]
+        ),
+        .testTarget(
+            name: "StatisticsTests",
+            dependencies: ["Statistics"]
+        ),
+        .testTarget(
+            name: "RandomNumberGenerationTests",
+            dependencies: ["RandomNumberGeneration"]
+        ),
     ]
 )

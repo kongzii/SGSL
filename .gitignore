@@ -1,5 +1,7 @@
 .build
+.swiftpm
 .history
 .idea
 .code
 .vscode
+.DS_Store

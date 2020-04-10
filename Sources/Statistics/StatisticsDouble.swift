@@ -1,39 +1,39 @@
 import CGSL
 
-extension Array where Element == Double {
-    public func mean(
+public extension Array where Element == Double {
+    func mean(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_mean(self, stride, count)
     }
 
-    public func median(
+    func median(
         isSorted: Bool = false,
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_median_from_sorted_data(isSorted ? self : sorted(), stride, count)
     }
 
-    public func sampleVariance(
+    func sampleVariance(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_variance(self, stride, count)
     }
 
-    public func sampleVariance(
+    func sampleVariance(
         withMean mean: Double,
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_variance_m(self, stride, count, mean)
     }
 
-    public func sampleStandardDeviation(
+    func sampleStandardDeviation(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_sd(self, stride, count)
     }
 
-    public func sampleStandardDeviation(
+    func sampleStandardDeviation(
         withMean mean: Double,
         withStride stride: Int = 1
     ) -> Double {

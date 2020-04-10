@@ -1,34 +1,34 @@
 import CGSL
 
-extension Array where Element == Float {
-    public func mean(
+public extension Array where Element == Float {
+    func mean(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_float_mean(self, stride, count)
     }
 
-    public func median() -> Double {
+    func median() -> Double {
         let sorted = self.sorted()
         return gsl_stats_float_median_from_sorted_data(sorted, 1, count)
     }
 
-    public func sampleVariance() -> Double {
+    func sampleVariance() -> Double {
         gsl_stats_float_variance(self, 1, count)
     }
 
-    public func sampleVariance(
+    func sampleVariance(
         withMean mean: Double
     ) -> Double {
         gsl_stats_float_variance_m(self, 1, count, mean)
     }
 
-    public func sampleStandardDeviation(
+    func sampleStandardDeviation(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_float_sd(self, stride, count)
     }
 
-    public func sampleStandardDeviation(
+    func sampleStandardDeviation(
         withMean mean: Double,
         withStride stride: Int = 1
     ) -> Double {
