@@ -1,103 +1,103 @@
 {
   "warnings": [
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/MathematicalFunctions/MathematicalFunctions.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/MathematicalFunctions/MathematicalFunctions.swift",
       "line": 4,
       "symbol": "Double.log1p()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/RandomNumberGeneration/RandomNumberGeneration.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/RandomNumberGeneration/RandomNumberGeneration.swift",
       "line": 5,
       "symbol": "Array.random(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 4,
       "symbol": "Array.mean(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 10,
       "symbol": "Array.median(isSorted:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 17,
       "symbol": "Array.sampleVariance(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 23,
       "symbol": "Array.sampleVariance(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 30,
       "symbol": "Array.sampleStandardDeviation(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsDouble.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
       "line": 36,
       "symbol": "Array.sampleStandardDeviation(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 4,
       "symbol": "Array.mean(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 10,
       "symbol": "Array.median()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 15,
       "symbol": "Array.sampleVariance()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 19,
       "symbol": "Array.sampleVariance(withMean:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 25,
       "symbol": "Array.sampleStandardDeviation(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/peter.jung/Projects/SGSL/Sources/Statistics/StatisticsFloat.swift",
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
       "line": 31,
       "symbol": "Array.sampleStandardDeviation(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/peter.jung/Projects/SGSL"
+  "source_directory": "/Users/travis/build/kongzii/SGSL"
 }
