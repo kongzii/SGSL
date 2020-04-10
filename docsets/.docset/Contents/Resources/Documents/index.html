@@ -51,15 +51,23 @@
 
 <p>Simple scientific library for Swift based on <a href="https://www.gnu.org/software/gsl/">GNU Scientific Library</a>.</p>
 
-<p>Documentation is generated automatically from master branch using <a href="https://github.com/realm/jazzy">jazzy</a> and <a href="travis-ci.org">travis</a>. Available at <a href="https://kongzii.github.io/SGSL/">Github Pages</a>.</p>
+<p>Documentation is generated automatically from master branch using <a href="https://github.com/realm/jazzy">jazzy</a> and <a href="travis-ci.org">travis</a>. Available at <a href="https://kongzii.github.io/SGSL/">github pages</a>.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 <h3 id='add-dependency' class='heading'>Add dependency</h3>
 
 <p>Add a dependency in your <code>Package.swift</code></p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/kongzii/SGSL"</span><span class="p">,</span> <span class="o">.</span><span class="nf">branch</span><span class="p">(</span><span class="s">"master"</span><span class="p">))</span>
+</code></pre>
 
-<p><code>.package(url: &quot;https://github.com/kongzii/SGSL&quot;, .branch(&quot;master&quot;))</code></p>
-<h3 id='import-packages' class='heading'>Import packages</h3>
-<h4 id='whole-library' class='heading'>Whole library</h4>
+<p>Currently, SGSL depends on the system library <code>gsl</code>. </p>
+<h4 id='osx' class='heading'>OSX</h4>
+<pre class="highlight plaintext"><code>brew install gsl
+</code></pre>
+<h4 id='linux' class='heading'>Linux</h4>
+<pre class="highlight plaintext"><code>apt install libgsl-dev
+</code></pre>
+<h3 id='usage' class='heading'>Usage</h3>
+<h4 id='import-whole-library' class='heading'>Import whole library</h4>
 
 <p>You can import the whole library via</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SGSL</span>
@@ -75,6 +83,9 @@
 <span class="k">let</span> <span class="nv">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="nf">mean</span><span class="p">())</span>
 </code></pre>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>To generate documentation, run <code>make documentation</code>. Files will be saved into <code>./Documentation</code> folder. It is not needed to re-generate documentation in PRs, as this will be done and published automatically.</p>
 <h2 id='code-style' class='heading'>Code style</h2>
 
 <p>We use <a href="https://github.com/nicklockwood/SwiftFormat">swiftformat</a> with default settings.</p>
