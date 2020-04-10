@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (30% documented)</p>
+        <p><a href="index.html"> Docs</a> (38% documented)</p>
         <p class="header-right"><a href="https://github.com/kongzii/SGSL"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -44,9 +44,14 @@
         <section>
           <section class="section">
             
-            <h1 id='sgsl' class='heading'>SGSL</h1>
+            <p><a href=""><img src="https://img.shields.io/badge/Swift-5.2-green.svg" alt="Swift Version"></a>
+<a href="https://travis-ci.com/kongzii/SGSL"><img src="https://travis-ci.com/kongzii/SGSL.svg?branch=master" alt="Build Status"></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a> </p>
+<h1 id='sgsl' class='heading'>SGSL</h1>
 
 <p>Simple scientific library for Swift based on <a href="https://www.gnu.org/software/gsl/">GNU Scientific Library</a>.</p>
+
+<p>Documentation is generated automatically from master branch using <a href="https://github.com/realm/jazzy">jazzy</a> and <a href="travis-ci.org">travis</a>. Available at <a href="https://kongzii.github.io/SGSL/">Github Pages</a>.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 <h3 id='add-dependency' class='heading'>Add dependency</h3>
 
@@ -57,25 +62,27 @@
 <h4 id='whole-library' class='heading'>Whole library</h4>
 
 <p>You can import the whole library via</p>
-
-<p><code>import SGSL</code></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SGSL</span>
+</code></pre>
 <h4 id='import-only-required-components' class='heading'>Import only required components</h4>
 
 <p>Or only specific parts</p>
-
-<p><code>import Statistics</code></p>
-<h3 id='example' class='heading'>Example</h3>
-<pre class="highlight plaintext"><code>import Statistics
-
-let x = [1.0, 2.0, 3.0]
-print(x.mean())
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Statistics</span>
 </code></pre>
+<h3 id='usage-example' class='heading'>Usage example</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Statistics</span>
+
+<span class="k">let</span> <span class="nv">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="nf">mean</span><span class="p">())</span>
+</code></pre>
+<h2 id='code-style' class='heading'>Code style</h2>
+
+<p>We use <a href="https://github.com/nicklockwood/SwiftFormat">swiftformat</a> with default settings.</p>
 <h2 id='contributions' class='heading'>Contributions</h2>
 
-<p>If you found missing features or bugs, please feel free to open an issue or even better, a pull request. :-)</p>
-<h3 id='code-style' class='heading'>Code style</h3>
+<p>If you found missing features or bugs, please feel free to open an issue or even better, a pull request.</p>
 
-<p>We use <a href="https://github.com/nicklockwood/SwiftFormat">SwiftFormat</a> with default settings.</p>
+<p><strong>Working on your first Pull Request?</strong> You can learn how from this <em>free</em> series <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">How to Contribute to an Open Source Project on GitHub</a> </p>
 
           </section>
         </section>

@@ -15,85 +15,43 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 4,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 12,
       "symbol": "Array.mean(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 10,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 18,
       "symbol": "Array.median(isSorted:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 17,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 25,
       "symbol": "Array.sampleVariance(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 23,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 31,
       "symbol": "Array.sampleVariance(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 30,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 38,
       "symbol": "Array.sampleStandardDeviation(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsDouble.swift",
-      "line": 36,
-      "symbol": "Array.sampleStandardDeviation(withMean:withStride:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 4,
-      "symbol": "Array.mean(withStride:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 10,
-      "symbol": "Array.median()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 15,
-      "symbol": "Array.sampleVariance()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 19,
-      "symbol": "Array.sampleVariance(withMean:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 25,
-      "symbol": "Array.sampleStandardDeviation(withStride:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/StatisticsFloat.swift",
-      "line": 31,
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 44,
       "symbol": "Array.sampleStandardDeviation(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
