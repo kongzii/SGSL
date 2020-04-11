@@ -67,7 +67,7 @@ To generate documentation, run `make documentation`. Files will be saved into `.
 
 We use [swiftformat](https://github.com/nicklockwood/SwiftFormat) with default settings.
 
-## Tests
+## Tests
 
 ```
 docker-compose up --build test
