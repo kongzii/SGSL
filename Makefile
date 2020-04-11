@@ -21,7 +21,6 @@ documentation:
 		--module-name RandomNumberGeneration \
 		> SK_RandomNumberGeneration.json
 	@jazzy \
-		--clean \
 		--output Documentation \
 		--github_url https://github.com/kongzii/SGSL \
 		--min-acl internal \

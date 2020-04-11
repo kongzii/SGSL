@@ -13,4 +13,7 @@ jobs:
         run: brew install make gsl sourcekitten
       - name: Generate documentation
         run: gmake documentation
-
+      - name: Checkout and Upload
+        run: git clone --single-branch --branch gh-pages https://github.com/kongzii/SGSL.git Documentation \
+          cd Documentation \
+          ls Documentation
