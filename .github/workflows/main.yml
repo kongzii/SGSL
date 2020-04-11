@@ -23,3 +23,13 @@ jobs:
         uses: norio-nomura/action-swiftlint@3.1.0
         with:
           args: --strict
+  SwiftFormat:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies from brew
+        run: brew install swiftformat
+      - name: Run formatting
+        run: swiftformat .
+      - name: Run git diff
+        run: git diff --exit-code
