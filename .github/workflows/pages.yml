@@ -1,0 +1,16 @@
+name: Documentation
+
+on: push
+
+jobs:
+  Generate:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies from gem
+        run: gem install jazzy
+      - name: Install dependencies from brew
+        run: brew install make gsl sourcekitten
+      - name: Generate documentation
+        run: gmake documentation
+
