@@ -1,0 +1,20 @@
+FROM ubuntu:bionic-20200311
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y pkg-config curl clang libpython-dev libblocksruntime-dev libxml2 zlib1g-dev git python3.8 python3-pip libgsl-dev && \
+    pip3 install --no-cache-dir numpy
+
+ARG SWIFT_TF_URL=https://storage.googleapis.com/swift-tensorflow-artifacts/releases/v0.8/rc1/swift-tensorflow-RELEASE-0.8-ubuntu18.04.tar.gz
+
+RUN curl -fL $SWIFT_TF_URL -o swift-tensorflow.tar.gz && \
+    tar xzf swift-tensorflow.tar.gz --directory / && \
+    rm swift-tensorflow.tar.gz && \
+    export PATH=$(pwd)/usr/bin:"${PATH}"
+
+WORKDIR /test
+COPY . /test
+
+CMD ["swift", "test"]
