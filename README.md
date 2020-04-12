@@ -15,7 +15,7 @@ Documentation is generated automatically from master branch using [jazzy](https:
 Add a dependency in your `Package.swift`
 
 ```swift
-.package(url: "https://github.com/kongzii/SGSL", .branch("master"))
+.package(url: "https://github.com/kongzii/SGSL", from: "0.1.0")
 ```
 
 Currently, SGSL depends on the system library `gsl`. 
