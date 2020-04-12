@@ -22,6 +22,19 @@ public extension Array where Element == Double {
         gsl_stats_median_from_sorted_data(isSorted ? self : sorted(), stride, count)
     }
 
+    func variance(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_variance_with_fixed_mean(self, stride, count, mean(withStride: stride))
+    }
+
+    func variance(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_variance_with_fixed_mean(self, stride, count, mean)
+    }
+
     func sampleVariance(
         withStride stride: Int = 1
     ) -> Double {
@@ -35,6 +48,19 @@ public extension Array where Element == Double {
         gsl_stats_variance_m(self, stride, count, mean)
     }
 
+    func standardDeviation(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_sd_with_fixed_mean(self, stride, count, mean(withStride: stride))
+    }
+
+    func standardDeviation(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_sd_with_fixed_mean(self, stride, count, mean)
+    }
+
     func sampleStandardDeviation(
         withStride stride: Int = 1
     ) -> Double {
@@ -46,5 +72,18 @@ public extension Array where Element == Double {
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_sd_m(self, stride, count, mean)
+    }
+
+    func totalSumOfSquares(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_tss(self, stride, count)
+    }
+
+    func totalSumOfSquares(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_tss_m(self, stride, count, mean)
     }
 }
