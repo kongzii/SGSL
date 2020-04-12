@@ -16,8 +16,17 @@ let package = Package(
             name: "Statistics",
             targets: ["Statistics"]
         ),
+        .library(
+            name: "RandomNumberGeneration",
+            targets: ["RandomNumberGeneration"]
+        ),
+        .library(
+            name: "MathematicalFunctions",
+            targets: ["MathematicalFunctions"]
+        ),
     ],
     dependencies: [
+        .package(url: "https://github.com/pvieito/PythonKit.git", .branch("master")),
     ],
     targets: [
         .target(
@@ -50,15 +59,15 @@ let package = Package(
         ),
         .testTarget(
             name: "MathematicalFunctionsTests",
-            dependencies: ["MathematicalFunctions"]
+            dependencies: ["MathematicalFunctions", "PythonKit"]
         ),
         .testTarget(
             name: "StatisticsTests",
-            dependencies: ["Statistics"]
+            dependencies: ["Statistics", "PythonKit"]
         ),
         .testTarget(
             name: "RandomNumberGenerationTests",
-            dependencies: ["RandomNumberGeneration"]
+            dependencies: ["RandomNumberGeneration", "PythonKit"]
         ),
     ]
 )
