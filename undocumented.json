@@ -31,28 +31,70 @@
     {
       "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
       "line": 25,
-      "symbol": "Array.sampleVariance(withStride:)",
+      "symbol": "Array.variance(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
       "line": 31,
-      "symbol": "Array.sampleVariance(withMean:withStride:)",
+      "symbol": "Array.variance(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
       "line": 38,
-      "symbol": "Array.sampleStandardDeviation(withStride:)",
+      "symbol": "Array.sampleVariance(withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
       "line": 44,
+      "symbol": "Array.sampleVariance(withMean:withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 51,
+      "symbol": "Array.standardDeviation(withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 57,
+      "symbol": "Array.standardDeviation(withMean:withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 64,
+      "symbol": "Array.sampleStandardDeviation(withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 70,
       "symbol": "Array.sampleStandardDeviation(withMean:withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 77,
+      "symbol": "Array.totalSumOfSquares(withStride:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/kongzii/SGSL/Sources/Statistics/Statistics.swift",
+      "line": 83,
+      "symbol": "Array.totalSumOfSquares(withMean:withStride:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
