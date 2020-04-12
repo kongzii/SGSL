@@ -1,6 +1,5 @@
 import CGSL
 
-/// RandomNumberGeneration extension
 public extension Array where Element == Double {
     static func random(count: Int) -> [Double] {
         gsl_rng_env_setup()

@@ -1,20 +1,27 @@
 import CGSL
 
-/// Statistics extension
 public extension Array where Element: Numeric {
-    /// Sumation of all elements in array
-    func sum(countFrom start: Element = 0) -> Element {
+    /// - Parameter countFrom: Will start sum from this value.
+    /// - Returns: The sum of data.
+    func sum(
+        countFrom start: Element = 0
+    ) -> Element {
         reduce(start, +)
     }
 }
 
 public extension Array where Element == Double {
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The arithmetic mean of data.
     func mean(
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_mean(self, stride, count)
     }
 
+    /// - Parameter isSorted: Whenewer data are already sorted.
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The median of data.
     func median(
         isSorted: Bool = false,
         withStride stride: Int = 1
