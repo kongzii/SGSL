@@ -49,6 +49,14 @@ final class StatisticsTests: XCTestCase {
         )
     }
 
+    func testAbsoluteDeviation() throws {
+        let data = [17.2, 18.0, 16.5, 18.3, 12.5]
+        XCTAssertEqual(
+            data.absoluteDeviation(),
+            Double(NUMPY.divide(NUMPY.sum(NUMPY.abs(NUMPY.subtract(data, NUMPY.mean(data)))), data.count))
+        )
+    }
+
     static var allTests = [
         ("testSum", testSum),
         ("testMean", testMean),
@@ -58,5 +66,6 @@ final class StatisticsTests: XCTestCase {
         ("testStandardDeviation", testStandardDeviation),
         ("testSampleStandardDeviation", testSampleStandardDeviation),
         ("testTotalSumOfSquares", testTotalSumOfSquares),
+        ("testAbsoluteDeviation", testAbsoluteDeviation),
     ]
 }

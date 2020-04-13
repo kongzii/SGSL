@@ -145,4 +145,32 @@ public extension Array where Element == Double {
     ) -> Double {
         gsl_stats_tss_m(self, stride, count, mean)
     }
+
+    /// This is equivalent to `numpy.divide(numpy.sum(numpy.abs(numpy.subtract(data, numpy.mean(data))))), len(data))`.
+    /// Module `Statistics`.
+    ///
+    /// `$$ad  = {1 \over N} \sum |x_i - {\hat\mu}|$$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The absolute deviation from the mean of data.
+    func absoluteDeviation(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_absdev(self, stride, count)
+    }
+
+    /// This is equivalent to `numpy.divide(numpy.sum(numpy.abs(numpy.subtract(data, withMean))), len(data))`.
+    /// Module `Statistics`.
+    ///
+    /// `$$ad  = {1 \over N} \sum |x_i - withMean|$$`
+    ///
+    /// - Parameter withMean: The mean value to compute with.
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The absolute deviation from the mean of data.
+    func absoluteDeviation(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_absdev_m(self, stride, count, mean)
+    }
 }
