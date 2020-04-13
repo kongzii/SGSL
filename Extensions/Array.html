@@ -4,8 +4,10 @@
     <title>Array Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../css/katex.min.css" />
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/katex.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
   </head>
@@ -14,7 +16,7 @@
     <a title="Array Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (36% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/kongzii/SGSL"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -79,7 +81,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.random.rand(count)</code>.
+Module <code>RandomNumberGeneration</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -89,6 +92,10 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">random</span><span class="p">(</span><span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of length <code>count</code> initialized with random uniform values.</p>
                       </div>
                     </section>
                   </div>
@@ -119,7 +126,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This is equivalent to <code>numpy.sum(x)</code>.
+Module <code>Statistics</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -143,7 +152,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Will start sum from this value.</p>
+                                  <p>Starting value for the sum.</p>
                                 </div>
                               </td>
                             </tr>
@@ -183,7 +192,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This is equivalent to <code>numpy.mean(x)</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>\hat\mu = {1 \over N} \sum x_i</div></p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -234,7 +247,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This is equivalent to <code>numpy.median(x)</code>.
+Module <code>Statistics</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -288,38 +303,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sa10StatisticsSdRszlE8variance10withStrideSdSi_tF"></a>
-                    <a name="//apple_ref/swift/Method/variance(withStride:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa10StatisticsSdRszlE8variance10withStrideSdSi_tF">variance(withStride:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">variance</span><span class="p">(</span>
-    <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sa10StatisticsSdRszlE8variance8withMean0C6StrideS2d_SitF"></a>
+                    <a name="/s:Sa10StatisticsSdRszlE8variance8withMean0C6StrideS2dSg_SitF"></a>
                     <a name="//apple_ref/swift/Method/variance(withMean:withStride:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa10StatisticsSdRszlE8variance8withMean0C6StrideS2d_SitF">variance(withMean:<wbr>withStride:<wbr>)</a>
+                    <a class="token" href="#/s:Sa10StatisticsSdRszlE8variance8withMean0C6StrideS2dSg_SitF">variance(withMean:<wbr>withStride:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -327,7 +313,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.var(x)</code> if <code>withMean = nil</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>{\hat\sigma}^2 = {1 \over N} \sum (x_i - {\hat\mu})^2</div></p>
 
                       </div>
                       <div class="declaration">
@@ -335,11 +324,46 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">variance</span><span class="p">(</span>
-    <span class="n">withMean</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+    <span class="n">withMean</span> <span class="nv">customMean</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The variance of data.</p>
                       </div>
                     </section>
                   </div>
@@ -357,7 +381,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.var(x, ddof=1)</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>{\hat\sigma}^2 = {1 \over (N-1)} \sum (x_i - {\hat\mu})^2</div></p>
 
                       </div>
                       <div class="declaration">
@@ -369,6 +396,29 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The sample variance of data.</p>
                       </div>
                     </section>
                   </div>
@@ -386,7 +436,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>{\hat\sigma}^2 = {1 \over (N-1)} \sum (x_i - withMean)^2</div></p>
 
                       </div>
                       <div class="declaration">
@@ -400,44 +452,50 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The sample variance of data.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sa10StatisticsSdRszlE17standardDeviation10withStrideSdSi_tF"></a>
-                    <a name="//apple_ref/swift/Method/standardDeviation(withStride:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa10StatisticsSdRszlE17standardDeviation10withStrideSdSi_tF">standardDeviation(withStride:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">standardDeviation</span><span class="p">(</span>
-    <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sa10StatisticsSdRszlE17standardDeviation8withMean0D6StrideS2d_SitF"></a>
+                    <a name="/s:Sa10StatisticsSdRszlE17standardDeviation8withMean0D6StrideS2dSg_SitF"></a>
                     <a name="//apple_ref/swift/Method/standardDeviation(withMean:withStride:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa10StatisticsSdRszlE17standardDeviation8withMean0D6StrideS2d_SitF">standardDeviation(withMean:<wbr>withStride:<wbr>)</a>
+                    <a class="token" href="#/s:Sa10StatisticsSdRszlE17standardDeviation8withMean0D6StrideS2dSg_SitF">standardDeviation(withMean:<wbr>withStride:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -445,7 +503,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.std(x)</code> if <code>withMean = nil</code>.
+Module <code>Statistics</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -453,11 +512,46 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">standardDeviation</span><span class="p">(</span>
-    <span class="n">withMean</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+    <span class="n">withMean</span> <span class="nv">customMean</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The standard deviation of data.</p>
                       </div>
                     </section>
                   </div>
@@ -475,7 +569,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.std(x, ddof=1)</code>.
+Module <code>Statistics</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -487,6 +582,29 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The sample standard deviation of data.</p>
                       </div>
                     </section>
                   </div>
@@ -504,7 +622,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Module <code>Statistics</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -517,6 +635,41 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The sample standard deviation of data.</p>
                       </div>
                     </section>
                   </div>
@@ -534,7 +687,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.sum(numpy.square(numpy.subtract(data, numpy.mean(data))))</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>{\rm TSS} = \sum (x_i - {\hat\mu})^2</div></p>
 
                       </div>
                       <div class="declaration">
@@ -546,6 +702,29 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The total sum of squares of data.</p>
                       </div>
                     </section>
                   </div>
@@ -563,7 +742,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is equivalent to <code>numpy.sum(numpy.square(numpy.subtract(data, withMean)))</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>{\rm TSS} = \sum (x_i - withMean)^2</div></p>
 
                       </div>
                       <div class="declaration">
@@ -577,6 +759,41 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The total sum of squares of data.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -585,7 +802,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-04-12)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-04-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
