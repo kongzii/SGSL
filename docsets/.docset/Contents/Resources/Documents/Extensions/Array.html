@@ -797,6 +797,129 @@ Module <code>Statistics</code>.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sa10StatisticsSdRszlE17absoluteDeviation10withStrideSdSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/absoluteDeviation(withStride:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sa10StatisticsSdRszlE17absoluteDeviation10withStrideSdSi_tF">absoluteDeviation(withStride:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is equivalent to <code>numpy.divide(numpy.sum(numpy.abs(numpy.subtract(data, numpy.mean(data))))), len(data))</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>ad  = {1 \over N} \sum |x_i - {\hat\mu}|</div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">absoluteDeviation</span><span class="p">(</span>
+    <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The absolute deviation from the mean of data.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sa10StatisticsSdRszlE17absoluteDeviation8withMean0D6StrideS2d_SitF"></a>
+                    <a name="//apple_ref/swift/Method/absoluteDeviation(withMean:withStride:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sa10StatisticsSdRszlE17absoluteDeviation8withMean0D6StrideS2d_SitF">absoluteDeviation(withMean:<wbr>withStride:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is equivalent to <code>numpy.divide(numpy.sum(numpy.abs(numpy.subtract(data, withMean))), len(data))</code>.
+Module <code>Statistics</code>.</p>
+
+<p><div class='math m-block'>ad  = {1 \over N} \sum |x_i - withMean|</div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">absoluteDeviation</span><span class="p">(</span>
+    <span class="n">withMean</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+    <span class="n">withStride</span> <span class="nv">stride</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withMean</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mean value to compute with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withStride</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Stride to apply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The absolute deviation from the mean of data.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
