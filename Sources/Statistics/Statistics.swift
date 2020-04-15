@@ -173,4 +173,52 @@ public extension Array where Element == Double {
     ) -> Double {
         gsl_stats_absdev_m(self, stride, count, mean)
     }
+
+    /// `$$skew = {1 \over N} \sum {\left( x_i - {\hat\mu} \over {\hat\sigma} \right)}^3$$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The skewness of data.
+    func skew(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_skew(self, stride, count)
+    }
+
+    /// `$$skew = {1 \over N} \sum {\left( x_i - withMean \over withSampleStandardDeviation \right)}^3$$`
+    ///
+    /// - Parameter withMean: The mean value to compute with.
+    /// - Parameter withSampleStandardDeviation: The std value to compute with.
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The skewness of data.
+    func skew(
+        withMean mean: Double,
+        withSampleStandardDeviation sstd: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_skew_m_sd(self, stride, count, mean, sstd)
+    }
+
+    /// `$$kurtosis = \left( {1 \over N} \sum {\left(x_i - {\hat\mu} \over {\hat\sigma} \right)}^4 \right) - 3$$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The kurtosis of data
+    func kurtosis(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_kurtosis(self, stride, count)
+    }
+
+    /// `$$kurtosis = {1 \over N}
+    ///    \left( \sum {\left(x_i - withMean \over withSampleStandardDeviation \right)}^4 \right) - 3$$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Parameter withSampleStandardDeviation: The std value to compute with.
+    /// - Returns: The kurtosis of data
+    func kurtosis(
+        withMean mean: Double,
+        withSampleStandardDeviation sstd: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_kurtosis_m_sd(self, stride, count, mean, sstd)
+    }
 }
