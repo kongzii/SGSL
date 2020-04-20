@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y pkg-config clang libpython-dev libblocksruntime-dev libxml2 zlib1g-dev git python3.8 python3-pip libgsl-dev && \
-    pip3 install --no-cache-dir numpy scipy
+    pip3 install --no-cache-dir numpy scipy pandas
 
 WORKDIR /test
 COPY . /test

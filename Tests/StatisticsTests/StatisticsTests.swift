@@ -4,6 +4,8 @@ import XCTest
 @testable import Statistics
 
 let NUMPY = Python.import("numpy")
+let SCIPYSTATS = Python.import("scipy.stats")
+let PANDAS = Python.import("pandas")
 
 final class StatisticsTests: XCTestCase {
     func testSum() throws {
@@ -57,6 +59,35 @@ final class StatisticsTests: XCTestCase {
         )
     }
 
+    func testCovariance() throws {
+        let data = [-2.1, -1, 4.3]
+        let data2 = [3, 1.1, 0.12]
+        // Round because of small difference in last digit
+        XCTAssertEqual(
+            data.covariance(with: data2),
+            Double(NUMPY.around(NUMPY.cov(data, data2)[0][1], 5))
+        )
+    }
+
+    func testCorrelation() throws {
+        let data = [-2.1, -1, 4.3]
+        let data2 = [3, 1.1, 0.12]
+        XCTAssertEqual(
+            data.correlation(with: data2),
+            Double(NUMPY.corrcoef(data, data2)[0][1])
+        )
+    }
+
+    func testSpearman() throws {
+        let data = [1.0, 2.0, 3.0, 4.0, 8.0]
+        let data2 = [1.0, 5.0, 9.0, 4.0, 6.0]
+        // Round because there was always small difference in 17th digit
+        XCTAssertEqual(
+            Double(NUMPY.around(data.spearman(with: data2), 10)),
+            Double(NUMPY.around(SCIPYSTATS.spearmanr(data, data2).correlation, 10))
+        )
+    }
+
     static var allTests = [
         ("testSum", testSum),
         ("testMean", testMean),
@@ -67,5 +98,8 @@ final class StatisticsTests: XCTestCase {
         ("testSampleStandardDeviation", testSampleStandardDeviation),
         ("testTotalSumOfSquares", testTotalSumOfSquares),
         ("testAbsoluteDeviation", testAbsoluteDeviation),
+        ("testCovariance", testCovariance),
+        ("testCorrelation", testCorrelation),
+        ("testSpearman", testSpearman),
     ]
 }
