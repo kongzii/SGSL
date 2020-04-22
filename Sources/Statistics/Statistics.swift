@@ -211,8 +211,9 @@ public extension Array where Element == Double {
     /// `$$kurtosis = {1 \over N}
     ///    \left( \sum {\left(x_i - withMean \over withSampleStandardDeviation \right)}^4 \right) - 3$$`
     ///
-    /// - Parameter withStride: Stride to apply.
+    /// - Parameter withMean: The mean value to compute with.
     /// - Parameter withSampleStandardDeviation: The std value to compute with.
+    /// - Parameter withStride: Stride to apply.
     /// - Returns: The kurtosis of data
     func kurtosis(
         withMean mean: Double,
@@ -220,5 +221,102 @@ public extension Array where Element == Double {
         withStride stride: Int = 1
     ) -> Double {
         gsl_stats_kurtosis_m_sd(self, stride, count, mean, sstd)
+    }
+
+    /// `$$ a_1 = {\sum_{i = 2}^{n} (x_{i} - \hat\mu) (x_{i-1} - \hat\mu)
+    ///     \over
+    ///     \sum_{i = 1}^{n} (x_{i} - \hat\mu) (x_{i} - \hat\mu)} $$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The lag-1 autocorrelation of the dataset.
+    func lag1AutoCorrelation(
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_lag1_autocorrelation(self, stride, count)
+    }
+
+    /// `$$ a_1 = {\sum_{i = 2}^{n} (x_{i} - withMean) (x_{i-1} - withMean)
+    ///     \over
+    ///     \sum_{i = 1}^{n} (x_{i} - withMean) (x_{i} - withMean)} $$`
+    ///
+    /// - Parameter withStride: Stride to apply.
+    /// - Returns: The lag-1 autocorrelation of the dataset.
+    func lag1AutoCorrelation(
+        withMean mean: Double,
+        withStride stride: Int = 1
+    ) -> Double {
+        gsl_stats_lag1_autocorrelation_m(self, stride, count, mean)
+    }
+
+    /// `$$ covar = {1 \over (n - 1)} \sum_{i = 1}^{n} (x_{i} - \hat x) (y_{i} - \hat y) $$`
+    ///
+    /// - Parameter with: Second dataset to compute covariance against.
+    /// - Parameter withStride: Stride to apply to self.
+    /// - Parameter withStride2: Stride to apply to with.
+    /// - Returns: The covariance of the datasets self and with.
+    func covariance(
+        with data: [Double],
+        withStride stride: Int = 1,
+        withStride2 stride2: Int = 1
+    ) -> Double {
+        precondition(count == data.count, "Dataset 1 and 2 needs to be of the same size.")
+        return gsl_stats_covariance(self, stride, data, stride2, count)
+    }
+
+    /// This is equivalent to `numpy.cov(self, with)[0][1]`.
+    /// `$$ covar = {1 \over (n - 1)} \sum_{i = 1}^{n} (x_{i} - \hat x) (y_{i} - \hat y) $$`
+    ///
+    /// - Parameter with: Second dataset to compute covariance against.
+    /// - Parameter withMean: The mean value of self to compute with.
+    /// - Parameter withMean: The mean value of with to compute with.
+    /// - Parameter withStride: Stride to apply to self.
+    /// - Parameter withStride2: Stride to apply to with.
+    /// - Returns: The covariance of the datasets self and with.
+    func covariance(
+        with data: [Double],
+        withMean mean: Double,
+        withMean2 mean2: Double,
+        withStride stride: Int = 1,
+        withStride2 stride2: Int = 1
+    ) -> Double {
+        precondition(count == data.count, "Dataset 1 and 2 needs to be of the same size.")
+        return gsl_stats_covariance_m(self, stride, data, stride2, count, mean, mean2)
+    }
+
+    /// This is equivalent to `numpy.corrcoef(self, with)[0][1]`.
+    /// `$$ r = {cov(x, y) \over \hat\sigma_x \hat\sigma_y} =
+    ///     {{1 \over n-1} \sum (x_i - \hat x) (y_i - \hat y)
+    ///     \over
+    ///     \sqrt{{1 \over n-1} \sum (x_i - {\hat x})^2}
+    ///     \sqrt{{1 \over n-1} \sum (y_i - {\hat y})^2}
+    ///     } $$`
+    ///
+    /// - Parameter with: Second dataset to compute correlation against.
+    /// - Parameter withStride: Stride to apply to self.
+    /// - Parameter withStride2: Stride to apply to with.
+    /// - Returns: The correlation of the datasets self and with.
+    func correlation(
+        with data: [Double],
+        withStride stride: Int = 1,
+        withStride2 stride2: Int = 1
+    ) -> Double {
+        precondition(count == data.count, "Dataset 1 and 2 needs to be of the same size.")
+        return gsl_stats_correlation(self, stride, data, stride2, count)
+    }
+
+    /// This is equivalent to `scipy.stats.spearmanr(self, with).correlation`.
+    ///
+    /// - Parameter with: Second dataset to compute correlation agaisnst.
+    /// - Parameter withStride: Stride to apply to self.
+    /// - Parameter withStride2: Stride to apply to with.
+    /// - Returns: The Spearman rank correlation coefficient between the datasets self and with.
+    func spearman(
+        with data: [Double],
+        withStride stride: Int = 1,
+        withStride2 stride2: Int = 1
+    ) -> Double {
+        precondition(count == data.count, "Dataset 1 and 2 needs to be of the same size.")
+        var workspace = [Double](repeating: 0, count: 2 * count)
+        return gsl_stats_spearman(self, stride, data, stride2, count, &workspace)
     }
 }
