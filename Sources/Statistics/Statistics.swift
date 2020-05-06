@@ -319,4 +319,17 @@ public extension Array where Element == Double {
         var workspace = [Double](repeating: 0, count: 2 * count)
         return gsl_stats_spearman(self, stride, data, stride2, count, &workspace)
     }
+
+    /// `$$ {\hat\mu} = {{\sum w_i x_i} \over {\sum w_i}} $$`
+    ///
+    /// - Parameter weights: Weighted mean of the dataset.
+    /// - Parameter withWeightsStride: Stride to apply to weights.
+    /// - Parameter withDataStride: Stride to apply to data.
+    func weightedMean(
+        weights: [Double],
+        withWeightsStride wStride: Int = 1,
+        withDataStride dataStride: Int = 1
+    ) -> Double {
+        gsl_stats_wmean(weights, wStride, self, dataStride, count)
+    }
 }
